@@ -57,11 +57,12 @@ function SignUp() {
           name,
           email,
           password,
+          userName,
           Photo: await image1,
           bio,
         });
       alert("Welcome");
-      hist.push("/dashboard");
+      hist.push("/");
     }
   };
 
