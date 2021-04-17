@@ -17,6 +17,7 @@ function SignUp() {
   const [passwordError, setPasswordError] = useState("");
   const [image1, setImage1] = useState(null);
   const [name, setName] = useState("");
+  const [userName, setUserName] = useState("");
   const [bio, setBio] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
 
@@ -131,6 +132,16 @@ function SignUp() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
+                <div style={{ color: "#000", fontWeight: "600" }}>UserName</div>
+                <Input
+                  className="InputDiv"
+                  placeholder="UserName"
+                  type="name"
+                  autoFocus
+                  required
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value)}
+                />
                 <div style={{ color: "#000", fontWeight: "600" }}>Email</div>
                 <Input
                   className="InputDiv"
@@ -185,7 +196,7 @@ function SignUp() {
                   <span
                     onClick={() => setHasAccount(!hasAccount)}
                     style={{
-                      color: "firebrick",
+                      color: "gold",
                       cursor: "pointer",
                       fontWeight: "bold",
                     }}
@@ -249,7 +260,7 @@ function SignUp() {
                   <span
                     onClick={() => setHasAccount(!hasAccount)}
                     style={{
-                      color: "green",
+                      color: "lightgreen",
                       cursor: "pointer",
                       fontWeight: "bold",
                     }}
